@@ -5,17 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- === Project Coordinates === -->
-    <!-- TODO: Update accordingly -->
     <groupId>io.github.chrimle</groupId>
-    <artifactId>ultimate-maven-repository</artifactId>
-    <version>0.3.0</version>
-    <packaging>jar</packaging>
+    <artifactId>chrimle-oss-parent</artifactId>
+    <version>0.0.0</version>
+    <packaging>pom</packaging>
 
     <!-- === Project Metadata === -->
-    <!-- TODO: Update accordingly -->
-    <name>Ultimate Maven Repository</name>
-    <description>The Ultimate Maven Repository Template for your GitHub projects!</description>
-    <url>https://chrimle.github.io/Ultimate-Maven-Repository</url>
+    <name>Chrimle OSS Parent</name>
+    <description>Maven POM Parent for Chrimle's OSS Projects.</description>
+    <url>https://chrimle.github.io/Chrimle-OSS-Parent</url>
     <inceptionYear>2025</inceptionYear>
 
     <licenses>
@@ -27,13 +25,11 @@
     </licenses>
 
     <organization>
-        <!-- TODO: Update accordingly -->
-        <name>Ultimate Maven Repository</name>
-        <url>https://chrimle.github.io/Ultimate-Maven-Repository/</url>
+        <name>Chrimle OSS Parent</name>
+        <url>https://chrimle.github.io/Chrimle-OSS-Parent/</url>
     </organization>
 
     <developers>
-        <!-- TODO: Update accordingly -->
         <developer>
             <id>Chrimle</id>
             <name>Christopher Molin</name>
@@ -46,23 +42,21 @@
     </developers>
 
     <scm>
-        <!-- TODO: Update Accordingly-->
-        <url>http://github.com/chrimle/ultimate-maven-repository/tree/main</url>
-        <connection>scm:git:git://github.com/chrimle/ultimate-maven-repository.git</connection>
-        <developerConnection>scm:git:ssh://github.com:chrimle/ultimate-maven-repository.git</developerConnection>
+        <url>http://github.com/chrimle/chrimle-oss-parent/tree/main</url>
+        <connection>scm:git:git://github.com/chrimle/chrimle-oss-parent.git</connection>
+        <developerConnection>scm:git:ssh://github.com:chrimle/chrimle-oss-parent.git</developerConnection>
     </scm>
 
     <distributionManagement>
-        <!-- TODO: Update Accordingly -->
         <repository>
             <id>github</id>
             <name>GitHub Chrimle Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/chrimle/ultimate-maven-repository</url>
+            <url>https://maven.pkg.github.com/chrimle/chrimle-oss-parent</url>
         </repository>
         <snapshotRepository>
             <id>github</id>
             <name>GitHub Chrimle Apache Maven Snapshot Packages</name>
-            <url>https://maven.pkg.github.com/chrimle/ultimate-maven-repository</url>
+            <url>https://maven.pkg.github.com/chrimle/chrimle-oss-parent</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -71,124 +65,22 @@
         <!-- === Meta Properties === -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- === Maven Compiler === -->
-        <!-- TODO: Update accordingly -->
         <maven.compiler.release>17</maven.compiler.release>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <!-- === Spotless === -->
-        <spotless.check.skip>false</spotless.check.skip>
-        <spotless-maven-plugin.version>3.1.0</spotless-maven-plugin.version>
-        <!-- Publish to Maven Central Repository -->
-        <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
-        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
-        <central-publishing-maven-plugin.version>0.9.0</central-publishing-maven-plugin.version>
         <!-- === Dependency Versions === -->
     </properties>
+
+    <!-- === DependencyManagement === -->
+    <dependencyManagement/>
 
     <!-- === Dependencies === -->
     <dependencies/>
 
     <!-- === Build Plugins === -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.diffplug.spotless</groupId>
-                <artifactId>spotless-maven-plugin</artifactId>
-                <version>${spotless-maven-plugin.version}</version>
-                <configuration>
-                    <!-- Skips the spotless:apply when running in GitHub Actions -->
-                    <skip>${env.CI}</skip>
-                    <java>
-                        <lineEndings>UNIX</lineEndings>
-                        <includes>
-                            <include>src/main/**/*.java</include>
-                            <include>src/test/**/*.java</include>
-                        </includes>
-                        <googleJavaFormat>
-                            <style>GOOGLE</style>
-                        </googleJavaFormat>
-                    </java>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>apply</goal>
-                        </goals>
-                        <phase>validate</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- Attach sources.jar -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>${maven-source-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+    <build/>
 
-            <!-- Attach javadoc.jar -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven-javadoc-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
     <!-- === Profiles === -->
-    <profiles>
-        <profile>
-            <id>deploy-to-maven-central</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.sonatype.central</groupId>
-                        <artifactId>central-publishing-maven-plugin</artifactId>
-                        <version>${central-publishing-maven-plugin.version}</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <publishingServerId>central</publishingServerId>
-                            <tokenAuth>true</tokenAuth>
-                            <autoPublish>true</autoPublish>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${maven-gpg-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <gpgArguments>
-                                <arg>--pinentry-mode</arg>
-                                <arg>loopback</arg>
-                            </gpgArguments>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+    <profiles/>
+
 </project>
