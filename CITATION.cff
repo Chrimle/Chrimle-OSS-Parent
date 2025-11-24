@@ -4,7 +4,7 @@ authors:
 - family-names: "Molin"
   given-names: "Christopher"
   orcid: "https://orcid.org/0009-0002-1005-3942"
-title: "Ultimate Maven Repository"
-version: 0.3.0
-date-released: 2025-11-21
-url: "https://github.com/Chrimle/Ultimate-Maven-Repository"
+title: "Chrimle OSS Parent"
+version: 0.0.0
+date-released: 2025-11-24
+url: "https://github.com/Chrimle/Chrimle-OSS-Parent"
