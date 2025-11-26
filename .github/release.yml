@@ -5,12 +5,12 @@ changelog:
   exclude: # PRs labelled with these will be excluded from the Release Notes.
     labels:
       - meta
-      - doc
+      - documentation
       - test
   categories:
     - title: New Features
       labels:
-        - feat
+        - feature
     - title: Bug Fixes
       labels:
         - bug
