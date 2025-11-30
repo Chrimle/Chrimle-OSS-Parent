@@ -87,6 +87,12 @@
                     <artifactId>spotless-maven-plugin</artifactId>
                     <version>3.1.0</version>
                 </plugin>
+                <!-- To execute plugins such as Google Error Prone -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.14.0</version>
+                </plugin>
                 <!-- To package sources into the resulting JAR -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
