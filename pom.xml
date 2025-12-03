@@ -69,10 +69,21 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <!-- === Dependency Versions === -->
+        <junit-bom.version>6.0.1</junit-bom.version>
     </properties>
 
     <!-- === DependencyManagement === -->
-    <dependencyManagement/>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <!-- === Dependencies === -->
     <dependencies/>
