@@ -69,12 +69,18 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <!-- === Dependency Versions === -->
+        <apiguardian-api.version>1.1.2</apiguardian-api.version>
         <junit-bom.version>6.0.1</junit-bom.version>
     </properties>
 
     <!-- === DependencyManagement === -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apiguardian</groupId>
+                <artifactId>apiguardian-api</artifactId>
+                <version>${apiguardian-api.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
