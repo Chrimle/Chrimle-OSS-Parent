@@ -68,6 +68,8 @@
         <maven.compiler.release>17</maven.compiler.release>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <!-- === Plugin Versions === -->
+        <error_prone_core.version>2.42.0</error_prone_core.version>
         <!-- === Dependency Versions === -->
         <apiguardian-api.version>1.1.2</apiguardian-api.version>
         <junit-bom.version>6.0.1</junit-bom.version>
@@ -109,6 +111,20 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.14.1</version>
+                    <configuration>
+                        <compilerArgs>
+                            <arg>-XDcompilePolicy=simple</arg>
+                            <arg>--should-stop=ifError=FLOW</arg>
+                            <arg>-Xplugin:ErrorProne</arg>
+                        </compilerArgs>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>com.google.errorprone</groupId>
+                                <artifactId>error_prone_core</artifactId>
+                                <version>${error_prone_core.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
+                    </configuration>
                 </plugin>
                 <!-- To package sources into the resulting JAR -->
                 <plugin>
