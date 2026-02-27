@@ -72,7 +72,7 @@
         <error_prone_core.version>2.42.0</error_prone_core.version>
         <!-- === Dependency Versions === -->
         <apiguardian-api.version>1.1.2</apiguardian-api.version>
-        <junit-bom.version>6.0.2</junit-bom.version>
+        <junit-bom.version>6.0.3</junit-bom.version>
     </properties>
 
     <!-- === DependencyManagement === -->
