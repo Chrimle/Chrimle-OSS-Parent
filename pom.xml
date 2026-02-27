@@ -69,7 +69,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <!-- === Plugin Versions === -->
-        <error_prone_core.version>2.42.0</error_prone_core.version>
+        <error_prone_core.version>2.48.0</error_prone_core.version>
         <!-- === Dependency Versions === -->
         <apiguardian-api.version>1.1.2</apiguardian-api.version>
         <junit-bom.version>6.0.3</junit-bom.version>
