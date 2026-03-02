@@ -126,6 +126,12 @@
                         </annotationProcessorPaths>
                     </configuration>
                 </plugin>
+                <!-- Common maven-jar-plugin Version -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.5.0</version>
+                </plugin>
                 <!-- To package sources into the resulting JAR -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
