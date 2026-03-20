@@ -73,6 +73,8 @@
         <!-- === Dependency Versions === -->
         <apiguardian-api.version>1.1.2</apiguardian-api.version>
         <junit-bom.version>6.0.3</junit-bom.version>
+        <!-- === Properties to allow Easy Overriding === -->
+        <errorProneArg>-Xplugin:ErrorProne</errorProneArg>
     </properties>
 
     <!-- === DependencyManagement === -->
@@ -115,7 +117,7 @@
                         <compilerArgs>
                             <arg>-XDcompilePolicy=simple</arg>
                             <arg>--should-stop=ifError=FLOW</arg>
-                            <arg>-Xplugin:ErrorProne</arg>
+                            <arg>${errorProneArg}</arg>
                         </compilerArgs>
                         <annotationProcessorPaths>
                             <path>
