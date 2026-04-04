@@ -15,3 +15,6 @@
 >     - JavaDocs Publishing
 >     - GPG Signing
 > - Meta Information for [Chrimle](https://github.com/Chrimle)'s Projects.
+
+<!-- Scarf Pixel Tracker -->
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=d9ff30fa-ffcc-4963-a18d-9977bb84c3ad" />
