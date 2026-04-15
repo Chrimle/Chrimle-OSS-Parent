@@ -17,4 +17,4 @@
 > - Meta Information for [Chrimle](https://github.com/Chrimle)'s Projects.
 
 <!-- Scarf Pixel Tracker -->
-<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=d9ff30fa-ffcc-4963-a18d-9977bb84c3ad" />
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=60fe3b3b-0f1d-48c2-8bbe-f762c00e232f" />
