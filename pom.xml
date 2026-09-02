@@ -70,7 +70,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <!-- === Plugin Versions === -->
         <error_prone_core.version>2.42.0</error_prone_core.version>
-        <nullaway.version>0.14.0</nullaway.version>
+        <nullaway.version>0.14.1</nullaway.version>
         <!-- === Dependency Versions === -->
         <apiguardian-api.version>1.1.2</apiguardian-api.version>
         <spotbugs-annotations.version>4.10.4</spotbugs-annotations.version>
